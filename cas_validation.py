@@ -5,7 +5,7 @@ def cas_validation(cas):
 	"""Validates if a provided CAS number could exist"""
 
 	try:
-		cas_match = re.search(ur'(\d+)-(\d\d)-(\d)',cas) # Takes into account the standard CAS formatting e.g. 7732-18-5
+		cas_match = re.search('(\d+)-(\d\d)-(\d)',cas) # Takes into account the standard CAS formatting e.g. 7732-18-5
 		cas_string = cas_match.group(1) + cas_match.group(2) + cas_match.group(3)
 
 		increment = 0
