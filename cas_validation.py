@@ -22,17 +22,17 @@ def cas_validation(cas):
 
 		# Does the math
 		if validate == sum_cas % 10:
-			print 'True' # Can be removed if not used on Terminal
+			print('True') # Can be removed if not used on Terminal
 			return True
 		else: 
-			print 'False' # Can be removed if not used on Terminal
+			print('False') # Can be removed if not used on Terminal
 			return False
 	except:
-		print 'Something went wrong' # Choose the action for errors you like
+		print('Something went wrong') # Choose the action for errors you like
 
 def main():
   if len(sys.argv) != 2:
-    print 'usage: python cas_validation.py CAS'
+    print('usage: python cas_validation.py CAS')
     sys.exit(1)
   cas = sys.argv[1]
   cas_validation(cas)
