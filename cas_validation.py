@@ -1,14 +1,14 @@
 #!/usr/bin/python
 
-import sys, re
+import sys
 def cas_validation(cas):
 	"""Validates if a provided CAS number could exist"""
 
 	try:
-		cas_match = re.search('(\d+)-(\d\d)-(\d)',cas) # Takes into account the standard CAS formatting e.g. 7732-18-5
-		if len(cas_match.group(3)) != 1:
+		cas_match = cas.split('-') # Takes into account the standard CAS formatting e.g. 7732-18-5
+		if len(cas_match[2]) != 1:
 			return False
-		cas_string = cas_match.group(1) + cas_match.group(2) + cas_match.group(3)
+		cas_string = cas_match[0] + cas_match[1] + cas_match[2]
 
 		increment = 0
 		sum_cas = 0
